@@ -48,6 +48,7 @@ export class PropertyDetailsPage {
                     text: 'Text',
                     handler: () => {
                         console.log('Text clicked');
+                         window.open("https://github.com/tmitie/", "_blank");
                     }
                 },
                 {
@@ -84,6 +85,10 @@ export class PropertyDetailsPage {
         this.nav.push(BrokerDetailsPage, {
             broker: broker
         });
+    }
+    
+    feedThem(event, broker) {
+       window.open("https://github.com/tmitie/", "_blank");
     }
 
 }
