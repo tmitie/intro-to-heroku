@@ -2,11 +2,13 @@
     <button menuToggle>
         <ion-icon name="menu"></ion-icon>
     </button>
+    <IonButton color="success"(click)="feedThem($event, property.broker)">Feed</IonButton>
     <ion-title>Property</ion-title>
 </ion-navbar>
 
 <ion-content class="property">
     <div *ngIf="property" class="selection">
+         
         <ion-card>
             <img src="{{property.picture}}"/>
             <ion-card-content>
