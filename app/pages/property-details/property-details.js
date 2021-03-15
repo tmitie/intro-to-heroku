@@ -48,7 +48,8 @@ export class PropertyDetailsPage {
                     text: 'Text',
                     handler: () => {
                         console.log('Text clicked');
-                         window.open("https://github.com/tmitie/", "_blank");
+                        console.log('SHOULD OPEN SOMETHING');
+                        window.open("https://github.com/tmitie/", "_blank");
                     }
                 },
                 {
