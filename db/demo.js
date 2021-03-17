@@ -1,4 +1,4 @@
-module.exports = function(client) {
+module.exports = function (client) {
 
   client.query(`CREATE TABLE broker__c (
    id SERIAL NOT NULL,
@@ -37,6 +37,16 @@ module.exports = function(client) {
    property__c CHARACTER VARYING(18) REFERENCES property__c(sfid)
   );`);
 
+  client.query(`CREATE TABLE alimentador__c (
+    id SERIAL NOT NULL,
+    sfid CHARACTER VARYING(18) UNIQUE,
+    horario_manha__c,
+    horario_almoco__c,
+    horario_jantar__c
+    horario_ceia__c,
+    comando_para_placa__c
+   );`);
+
 
   client.query(`INSERT INTO broker__c (email__c, phone__c, name, mobile_phone__c, sfid, title__c, picture__c) VALUES ('caroline@ionicrealty.com', '617-244-3672', 'Caroline Kingsley', '617-244-3672', 'a0036000003SsJwAAK', 'Senior Broker', 'https://s3-us-west-1.amazonaws.com/sfdc-demo/people/caroline_kingsley.jpg');`);
   client.query(`INSERT INTO broker__c (email__c, phone__c, name, mobile_phone__c, sfid, title__c, picture__c) VALUES ('jen@ionicrealty.com', '617-244-3672', 'Jennifer Wu', '617-244-3672', 'a0036000003SsJzAAK', 'Senior Broker', 'https://s3-us-west-1.amazonaws.com/sfdc-demo/people/jennifer_wu.jpg');`);
@@ -61,5 +71,9 @@ module.exports = function(client) {
   client.query(`INSERT INTO property__c (name, thumbnail__c, beds__c, location__longitude__s, address__c, baths__c, broker__c, description__c, sfid, state__c, city__c, zip__c, title__c, picture__c, price__c, location__latitude__s) VALUES ('121 Harborwalk', 'https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house09sq.jpg', 3, -71.0493270000000052, '121 Harborwalk', 3, 'a0036000003SsJwAAK', 'Lorem ipsum dolor sit amet', 'a0236000002NHKpAAO', 'MA', 'Boston', '02420', 'Seaport District Retreat', 'https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house09.jpg', 450000, 42.3569499999999977);`);
 
   client.query(`INSERT INTO favorite__c (property__c, sfid) VALUES ('a0236000002NHKoAAO', 'a0136000003SsewAAC');`);
+
+  client.query(`INSERT INTO alimentador__c (sfid, horario_manha__c, horario_almoco__c, horario_jantar__c, horario_ceia__c, comando_para_placa__c)  VALUES ('a0136000003SsewZZZ', '06:30:00.125', '11:30:00.125', '17:30:00.125', '23:30:00.125', 'on');`);
+
+
 
 };
