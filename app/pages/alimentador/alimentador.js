@@ -1,6 +1,6 @@
 import { OnInit } from '@angular/core';
 import { Page, NavController, NavParams } from 'ionic-angular';
-import { BrokerService } from '../../services/broker-service';
+import { AlimentadorService } from '../../services/alimentador-service';
 
 @Page({
     templateUrl: 'build/pages/alimentador/alimentador.html'
@@ -9,18 +9,18 @@ import { BrokerService } from '../../services/broker-service';
 
 export class AlimentadorPage {
 
-    /*
+
     static get parameters() {
-        return [[NavController], [NavParams], [BrokerService]];
+        return [[NavController], [NavParams], [alimentadorService]];
     }
 
-    constructor(nav, navParams, brokerService) {
-        this.brokerService = brokerService;
-        this.broker = navParams.get('broker');
+    constructor(nav, navParams, alimentadorService) {
+        this.alimentadorService = alimentadorService;
+        this.alimentador = navParams.get('alimentador');
     }
 
     ngOnInit() {
-        this.brokerService.findById(this.broker.id).subscribe(broker => this.broker = broker);
+        this.alimentadorService.findById(this.alimentador.id).subscribe(alimentador => this.alimentador = alimentador);
     }
-*/
+
 }
