@@ -8,7 +8,7 @@ import 'rxjs/Rx';
  */
 let prettifyAlimentador = (alimentador) => {
     return {
-        id: alimentador.sfid,
+        /*id: alimentador.sfid,*/
         name: alimentador.name,
         comando: alimentador.comando_para_placa__c,
         cafe: alimentador.horario_manha__c,

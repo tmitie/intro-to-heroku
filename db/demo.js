@@ -72,7 +72,7 @@ module.exports = function (client) {
 
   client.query(`INSERT INTO favorite__c (property__c, sfid) VALUES ('a0236000002NHKoAAO', 'a0136000003SsewAAC');`);
 
-  client.query(`INSERT INTO alimentador__c (sfid, horario_manha__c, horario_almoco__c, horario_jantar__c, horario_ceia__c, comando_para_placa__c)  VALUES ('a0136000003SsewZZZ', '06:30:00.125', '11:30:00.125', '17:30:00.125', '23:30:00.125', 'on');`);
+  //client.query(`INSERT INTO alimentador__c (sfid, horario_manha__c, horario_almoco__c, horario_jantar__c, horario_ceia__c, comando_para_placa__c)  VALUES ('a0136000003SsewZZZ', '06:30:00.125', '11:30:00.125', '17:30:00.125', '23:30:00.125', 'on');`);
 
 
 
