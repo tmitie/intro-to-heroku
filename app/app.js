@@ -3,6 +3,7 @@ import { HTTP_PROVIDERS } from '@angular/http';
 import { App, Platform } from 'ionic-angular';
 
 import { WelcomePage } from './pages/welcome/welcome';
+import { AlimentadorPage } from './pages/alimentador/alimentador';
 import { PropertyListPage } from './pages/property-list/property-list';
 import { BrokerListPage } from './pages/broker-list/broker-list';
 import { FavoriteListPage } from './pages/favorite-list/favorite-list';
@@ -31,6 +32,7 @@ class MyApp {
 
         this.pages = [
             { title: 'Welcome', component: WelcomePage, icon: "bookmark" },
+            { title: 'Alimentador', component: AlimentadorPage, icon: "star" },
             { title: 'Properties', component: PropertyListPage, icon: "home" },
             { title: 'Brokers', component: BrokerListPage, icon: "people" },
             { title: 'Favorites', component: FavoriteListPage, icon: "star" }
