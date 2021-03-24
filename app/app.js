@@ -34,7 +34,7 @@ class MyApp {
 
         this.pages = [
             { title: 'Welcome', component: WelcomePage, icon: "bookmark" },
-            { title: 'Alimentador', component: AlimentadorPage, icon: "star" },
+            /*{ title: 'Alimentador', component: AlimentadorPage, icon: "star" },*/
             { title: 'Favorites', component: FavoriteListPage, icon: "star" },
             { title: 'Properties', component: PropertyListPage, icon: "home" },
             { title: 'Brokers', component: BrokerListPage, icon: "people" }
