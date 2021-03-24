@@ -23,7 +23,6 @@ client.connect();
 var propertyTable = 'property__c';
 var favoriteTable = 'favorite__c';
 var brokerTable = 'broker__c';
-var alimentadorTable = 'alimentador__c'
 
 // setup the demo data if needed
 client.query('SELECT * FROM salesforce.broker__c', function (error, data) {
@@ -41,7 +40,6 @@ client.query('SELECT * FROM salesforce.broker__c', function (error, data) {
     propertyTable = schema + 'property__c';
     favoriteTable = schema + 'favorite__c';
     brokerTable = schema + 'broker__c';
-    alimentadorTable = schema + 'alimentador_c';
   }
 });
 
@@ -90,20 +88,8 @@ app.get('/broker/:sfid', function (req, res) {
   });
 });
 
-
-
-app.get('/alimentador', function (req, res) {
-  client.query('SELECT comando_para_placa__c FROM ' + alimentadorTable, function (error, data) {
-    res.json(data.rows);
-    console.log("Alimentador 0000: " + data.rows[0]);
-    console.log("Alimentador: " + data.rows);
-  });
-});
-
-
-
 var port = process.env.PORT || 8200;
 
 app.listen(port);
 
-console.log('Listening at: http://localhost:' + port);
+//console.log('Listening at: http://localhost:' + port);
