@@ -9,18 +9,18 @@ import { AlimentadorService } from '../../services/alimentador-service';
 
 export class AlimentadorPage {
 
-
-    static get parameters() {
-        return [[NavController], [NavParams], [AlimentadorService]];
-    }
-
-    constructor(nav, navParams, alimentadorService) {
-        this.alimentadorService = alimentadorService;
-        this.alimentador = navParams.get('alimentador');
-    }
-
-    ngOnInit() {
-        this.alimentadorService.findById(this.alimentador.id).subscribe(alimentador => this.alimentador = alimentador);
-    }
-
+    /*
+        static get parameters() {
+            return [[NavController], [NavParams], [AlimentadorService]];
+        }
+    
+        constructor(nav, navParams, alimentadorService) {
+            this.alimentadorService = alimentadorService;
+            this.alimentador = navParams.get('alimentador');
+        }
+    
+        ngOnInit() {
+            this.alimentadorService.findById(this.alimentador.id).subscribe(alimentador => this.alimentador = alimentador);
+        }
+    */
 }
