@@ -1,10 +1,10 @@
 <ion-menu [content]="content">
 
-  <img src="images/logo.png" style="width: 100px;margin-left:84px" />
+  <img src="images/avatar1.png" style="width: 100px;margin-left:84px" />
 
   <ion-content>
     <ion-list>
-      <ion-list-header>Home Search</ion-list-header>
+      <ion-list-header>Dispositivos</ion-list-header>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon item-left name="{{p.icon}}"></ion-icon>
         {{p.title}}
