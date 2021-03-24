@@ -2,22 +2,26 @@
     <button menuToggle>
         <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Favorites</ion-title>
+    <ion-title>Tomadas Inteligentes</ion-title>
 </ion-navbar>
 
 <ion-content>
     <ion-list>
-        <ion-item-sliding *ngFor="let favorite of favorites">
-            <button ion-item (click)="itemTapped($event, favorite)">
-                <ion-thumbnail item-left>
-                    <img src="{{favorite.property.thumbnail}}"/>
-                </ion-thumbnail>
-                <h2>{{favorite.property.title}}</h2>
-                <p>{{favorite.property.city}}, {{favorite.property.state}} ∙ {{favorite.property.priceFormatted}}</p>
-            </button>
-            <ion-item-options>
-                <button danger (click)="deleteItem($event, favorite)">Delete</button>
-            </ion-item-options>
-        </ion-item-sliding>
+
+        <ion-item>
+            <ion-label>Geladeira</ion-label>
+            <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Televisão</ion-label>
+            <ion-toggle [(ngModel)]="sausage" disabled="true"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Hub Computador</ion-label>
+            <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
+        </ion-item>
+
     </ion-list>
 </ion-content>
