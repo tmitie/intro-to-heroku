@@ -1,6 +1,6 @@
 import { OnInit } from '@angular/core';
 import { Page, NavController, NavParams } from 'ionic-angular';
-import { AlimentadorService } from '../../services/alimentador-service';
+//import { AlimentadorService } from '../../services/alimentador-service';
 
 @Page({
     templateUrl: 'build/pages/alimentador/alimentador.html'
