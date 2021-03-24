@@ -11,7 +11,7 @@ export class AlimentadorPage {
 
 
     static get parameters() {
-        return [[NavController], [NavParams], [alimentadorService]];
+        return [[NavController], [NavParams], [AlimentadorService]];
     }
 
     constructor(nav, navParams, alimentadorService) {
