@@ -8,26 +8,30 @@
 <ion-content>
     <div>
         <ion-item>
-            <ion-label>hh:mm A (15 min steps)</ion-label>
+            <ion-label>Café (hh:mm)</ion-label>
             <ion-datetime displayFormat="h:mm A" minuteValues="0,15,30,45"></ion-datetime>
+            <ion-toggle [(ngModel)]="cafe">Ativar</ion-toggle>
         </ion-item>
 
         <ion-item>
-            <ion-label>hh:mm A (15 min steps)</ion-label>
+            <ion-label>Almoço (hh:mm)</ion-label>
             <ion-datetime displayFormat="h:mm A" minuteValues="0,15,30,45"></ion-datetime>
+            <ion-toggle [(ngModel)]="almoco"></ion-toggle>
         </ion-item>
 
         <ion-item>
-            <ion-label>hh:mm A (15 min steps)</ion-label>
+            <ion-label>Jantar (hh:mm)</ion-label>
             <ion-datetime displayFormat="h:mm A" minuteValues="0,15,30,45"></ion-datetime>
+            <ion-toggle [(ngModel)]="jantar"></ion-toggle>
         </ion-item>
 
         <ion-item>
-            <ion-label>hh:mm A (15 min steps)</ion-label>
+            <ion-label>Ceia (hh:mm)</ion-label>
             <ion-datetime displayFormat="h:mm A" minuteValues="0,15,30,45"></ion-datetime>
+            <ion-toggle [(ngModel)]="ceia"></ion-toggle>
         </ion-item>
 
-        <ion-row>
+        <ion-row justify-content-around>
             <ion-col>
                 <button ion-button>Armazenar Horários</button>
             </ion-col>
