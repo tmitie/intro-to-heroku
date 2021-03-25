@@ -91,8 +91,8 @@ app.get('/broker/:sfid', function (req, res) {
 });
 
 app.get('/alimentador', function (req, res) {
-  client.query('SELECT comando_para_placa__c, id FROM ' + alimentadorTable, function (error, data) {
-    res.json(data.rows);
+  client.query('SELECT comando_para_placa__c, id, sfid FROM ' + alimentadorTable, function (error, data) {
+    res.json(data.rows[0]);
     console.log("Alimentador 0000: " + data.rows[0]);
     console.log("Alimentador: " + data.rows);
   });
