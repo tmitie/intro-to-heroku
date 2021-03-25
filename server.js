@@ -100,7 +100,7 @@ app.get('/alimentador', function (req, res) {
 
 app.get('/comando', function (req, res) {
   client.query('SELECT comando_para_placa__c FROM ' + alimentadorTable, function (error, data) {
-    res.json(data.rows[0].comando_para_placa__c);
+    res.body(data.rows[0].comando_para_placa__c);
 
   });
 });
