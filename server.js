@@ -23,6 +23,7 @@ client.connect();
 var propertyTable = 'property__c';
 var favoriteTable = 'favorite__c';
 var brokerTable = 'broker__c';
+var alimentadorTable = 'alimentador__c';
 
 // setup the demo data if needed
 client.query('SELECT * FROM salesforce.broker__c', function (error, data) {
@@ -40,6 +41,7 @@ client.query('SELECT * FROM salesforce.broker__c', function (error, data) {
     propertyTable = schema + 'property__c';
     favoriteTable = schema + 'favorite__c';
     brokerTable = schema + 'broker__c';
+    alimentadorTable = schema + 'alimentador__c';
   }
 });
 
